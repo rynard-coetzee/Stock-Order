@@ -29,10 +29,11 @@ if add_data:
     new_data = {"Product": Product, "Quantity": int(Quantity) ,"Type": Type}
     df = df.append(new_data, ignore_index=True)
     df.to_csv("Order.csv", index=False)
-    st.table(df.sort_values(by="Product"))
+    
 
 if st.sidebar.button('Clear'):
     df = df[0:0]
     df.to_csv("Order.csv", index=False)
-
+    
+st.table(df.sort_values(by="Product"))
   
