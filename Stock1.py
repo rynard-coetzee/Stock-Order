@@ -1,5 +1,5 @@
 from pathlib import Path  # Python Standard Library
-from PIL import Image
+#from PIL import Image
 
 import pandas as pd  # pip install pandas
 import plotly.express as px
@@ -10,8 +10,8 @@ st.set_page_config(page_title="Stock Order",
 )
 
 df = pd.read_csv("Order.csv")
-image = Image.open('Bowler_Logo.jpg')  
-new_image = image.resize((600, 400))
+#image = Image.open('Bowler_Logo.jpg')  
+#new_image = image.resize((600, 400))
 
 st.sidebar.header("Select Product/Quantity Here:")
 st.sidebar.image(new_image)
